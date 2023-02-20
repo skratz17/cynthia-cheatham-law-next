@@ -38,15 +38,6 @@ export default function About() {
               <p>Ms. Cheatham primarily represents victims of interpersonal violence and belongs to national and international organizations, such as the American Professional Society on the Abuse of Children (APSAC) and attends international conferences, such as the Institute on Violence Abuse and Trauma (IVAT). She has an office in Nashville, Tennessee.</p>
             </div>
           </div>
-          <div className="attorney">
-            <img src="img/team/valerie.jpg" alt="Valerie Crabtree" className="attorney-img" />
-            <div className="attorney-content">
-              <h3 className="text-center"><span className="text-primary">Valerie</span> Crabtree</h3>
-              <h5 className="text-center">Paralegal</h5>
-              <div className="line-primary"></div>
-              <p>Valerie Crabtree graduated from Brown Mackie College with an associate degree in paralegal studies. Ms. Crabtree has been working in the legal field for 17 years, primarily for family law attorneys. Ms. Crabtree enjoys gardening and cooking. She loves to read and spend time with her dog.</p>
-            </div>
-          </div>
         </div>
       </section>
 
