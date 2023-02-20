@@ -18,7 +18,7 @@ export default function Contact() {
           <p className="lead">Cynthia Cheatham Law Office</p>
           <div>
             <p>PO Box 90814</p>
-            <p>Nashville, TN 37212</p>
+            <p>Nashville, TN 37209</p>
           </div>
           <p>Phone: <a href="tel:615-645-5665">(615) 645-5665</a></p>
           <div>

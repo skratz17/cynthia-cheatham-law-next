@@ -67,7 +67,11 @@ export default function Media() {
             { renderVideoControls(videos.left) }
           </div>
           <div id="player">
-            <ReactPlayer url={`https://www.youtube.com/watch?v=${selectedVideo}`} />
+            <ReactPlayer 
+              url={`https://www.youtube.com/watch?v=${selectedVideo}`} 
+              width="100%"
+              height="100%"
+            />
           </div>
           <div id="column-right" className="video-button-column">
             { renderVideoControls(videos.right) }

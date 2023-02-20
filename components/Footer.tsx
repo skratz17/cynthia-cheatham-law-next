@@ -7,7 +7,7 @@ export const Footer = () => (
         <div>
             <i className="fas fa-map-marked fa-2x"></i>
             <h3>Address</h3>
-            <p>PO Box 90814, Nashville, TN 37212</p>
+            <p>PO Box 90814, Nashville, TN 37209</p>
         </div>
         <div>
             <i className="fas fa-phone-alt fa-2x"></i>
