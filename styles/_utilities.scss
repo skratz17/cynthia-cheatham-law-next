@@ -1,0 +1,179 @@
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  overflow: hidden;
+}
+
+.text-primary { color: $primary-color; }
+.text-secondary { color: $secondary-color; }
+.text-light { color: $light-color; }
+.text-medium { color: $medium-color; }
+.text-dark { color: $dark-color; }
+
+.italics { font-style: italic; }
+
+.current {
+  background-color: $secondary-color;
+  color: set-text-color($secondary-color);
+}
+
+.l-heading { font-size: 3.5rem; }
+.m-heading { font-size: 2rem; }
+.s-heading { font-size: 1.5rem; }
+.lead { font-size: 1.6rem; }
+
+.text-center { text-align: center; }
+
+.nodisplay { display: none; }
+
+%btn-shared {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  padding: 0.75rem 2rem;
+  text-decoration: none;
+  transition: background-color 0.5s;
+}
+
+.btn-dark {
+  @extend %btn-shared;
+  background: $dark-color;
+  color: set-text-color($dark-color);
+
+  &:hover {
+    background: #444;
+    color: set-text-color(#444);
+  }
+}
+
+.btn-medium {
+  @extend %btn-shared;
+  background: $medium-color;
+  color: set-text-color($medium-color);
+
+  &:hover {
+    background: #ddd;
+    color: set-text-color(#ddd);
+  }
+}
+
+.btn-light {
+  @extend %btn-shared;
+  background: $light-color;
+  color: set-text-color($light-color);
+
+  &:hover {
+    background: #e4e4e4;
+    color: set-text-color(#e4e4e4);
+  }
+}
+
+.px-1 { padding: 0 1rem; }
+.px-2 { padding: 0 2rem; }
+.px-3 { padding: 0 3rem; }
+.px-4 { padding: 0 4rem; }
+
+.py-1 { padding: 1rem 0; }
+.py-2 { padding: 2rem 0; }
+.py-3 { padding: 3rem 0; }
+.py-4 { padding: 4rem 0; }
+
+.p-1 { padding: 1rem; }
+.p-2 { padding: 2rem; }
+.p-3 { padding: 3rem; }
+.p-4 { padding: 4rem; }
+
+.mx-1 { margin: 0 1rem; }
+.mx-2 { margin: 0 2rem; }
+.mx-3 { margin: 0 3rem; }
+.mx-4 { margin: 0 4rem; }
+
+.my-1 { margin: 1rem 0; }
+.my-2 { margin: 2rem 0; }
+.my-3 { margin: 3rem 0; }
+.my-4 { margin: 4rem 0; }
+
+.m-1 { margin: 1rem; }
+.m-2 { margin: 2rem; }
+.m-3 { margin: 3rem; }
+.m-4 { margin: 4rem; }
+
+%line {
+  height: 2px;
+  width: 4rem;
+  margin: 0.3rem auto;
+}
+
+.line-primary {
+  @extend %line;
+  background: $primary-color;
+}
+
+.line-light {
+  @extend %line;
+  background: $light-color;
+}
+
+// styling for lis that are used as links/nav
+%list-item-style {
+  padding: 1rem 1rem;
+  font-size: 1.2rem;
+  transition: background-color 0.5s;
+
+  &:hover {
+    background-color: $medium-color;
+    color: set-text-color($medium-color);
+    opacity: 0.9;
+  }
+
+  &.current:hover {
+    background-color: $secondary-color;
+    color: set-text-color($secondary-color);
+    opacity: 0.9;
+  }
+}
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: #fff;
+  color: set-text-color(#fff);
+  border-radius: 5px;
+  padding: 1rem;
+
+  & > *:first-child {
+    flex: 1;
+    margin-right: 0.5rem;
+    padding: 1rem 1rem 0 0;
+  }
+
+  & > *:last-child {
+    flex: 9;
+  }
+
+  .card-text {
+    margin-top: 0.5rem;
+  }
+}
+
+.list {
+  li {
+    border-bottom: 1px dotted $medium-color;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    a, p {
+      display: inline-block;
+      padding: 0.6rem 0;
+      transition: opacity 0.5s;
+  
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

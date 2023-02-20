@@ -1,0 +1,378 @@
+// IPad Pro and Down
+@media(max-width: 1024px) {
+  #main-nav {
+    .menu-wrap {
+      label {
+        position: absolute;
+        left: -10000px;
+        width: 1px; 
+        height: 1px;
+        overflow: hidden;
+      }
+    }
+
+    .nav-content {
+      .logo {
+        max-width: 300px;
+      }
+    }
+  }
+
+  #header-main {
+    .showcase {
+      justify-content: flex-end;
+
+      &:before {
+        background: url("../public/img/homepage/showcase.jpg") no-repeat 30% 30% / cover;
+      }
+
+      &-content {
+        margin-right: 0;
+      }
+    }
+  }
+
+  // Section: Attorneys
+  @supports(display: grid) {
+    #attorneys .attorney {
+      grid-template-columns: minmax(0, 1fr);
+    } 
+  }
+
+  // Section: Media Page YouTube Player
+  #youtube-player {
+    .container {
+      flex-direction: column;
+      align-items: center;
+
+      @supports(display: grid) {
+        grid-template-areas:
+        'player player'
+        'column-left column-right';
+        grid-gap: 0;
+      }
+    }
+
+    .video-button-column {
+      justify-content: space-evenly;
+
+      .video-button {
+        width: 250px;
+      }
+    }
+
+    #player {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+// Tablets
+@media(max-width: 768px) {
+  // Stack things where grid isn't supported
+  #testimonials .testimonials-wrapper,
+  #contact {
+    flex-direction: column;
+  }
+
+  // grid resets
+  @supports(display: grid) {
+    #who {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  // Section: Main Nav
+  #main-nav {
+    .menu-wrap {
+      display: block;
+    }
+
+    .nav-content {
+      justify-content: center;
+
+      ul {
+        display: none;
+      }
+    }
+  }
+
+  #header-main .showcase .showcase-content h2 { font-size: 3.5rem; }
+  #header-main .showcase .showcase-content p { font-size: 1.6rem; }
+
+  // Section: Homepage Who Are We
+  #who {
+    .who-img {
+      display: none;
+    }
+  }
+
+  // Section: Media Page News Articles
+  #news-articles {
+    .news-articles-grid {
+      text-align: center;
+
+      .card-icon {
+        display: none;
+      }
+
+      .card-content {
+        h5 {
+          display: block;
+          font-size: 1.1rem;
+          color: #666;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  // Section: Testimonials
+  #testimonials {
+    .testimonials-wrapper {
+      .testimonial {
+        border-bottom: 1px dotted #aaa;
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
+
+// Smartphones
+@media(max-width: 500px) {
+  // Utility resets
+  .l-heading { font-size: 2.5rem; }
+  .m-heading { font-size: 2rem; }
+  .s-heading { font-size: 1.5rem; }
+
+  .card {
+    text-align: center;
+  }
+
+  .card .card-icon {
+    display: none;
+  }
+
+  #main-nav {
+    .container {
+      overflow: hidden;
+    }
+  }
+
+  // Stack things that aren't grids
+  #main-footer .footer-content,
+  #practice-areas .container,
+  #news-articles, .news-articles-grid,
+  #academic-papers .academic-papers-grid {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  // Main footer
+  #main-footer {
+    .footer-content {
+      div {
+        padding: 1rem 0;
+        border-bottom: 1px solid #ccc;
+      }
+
+      div:first-child {
+        padding-top: 0;
+      }
+
+      div:last-child {
+        border-bottom: none;
+      }
+
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  /**
+    HOMEPAGE STYLES
+  */
+  #header-main {
+    .showcase {
+      height: 400px;
+
+      &:before {
+        background: url("../public/img/homepage/showcase.jpg") no-repeat center center / cover;
+      }
+      
+      &-content {
+        padding: 1rem;
+        max-width: 250px;
+      }
+    }
+  }
+
+  #header-main .showcase .showcase-content h2 { font-size: 2.5rem; }
+  #header-main .showcase .showcase-content p { font-size: 1.4rem; }
+
+  // Section: Homepage Practice Areas
+  #practice-areas {
+    .container {
+      .practice-area {
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 2rem;
+      }
+
+      .practice-area:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      .practice-area-content {
+        display: grid;
+        grid-gap: 0.5rem;
+        grid-template-columns: 1fr 3fr;
+
+        i {
+          grid-row: 1 / span 2;
+        }
+
+        *:last-child {
+          margin: 0 auto;
+          grid-column: 2;
+        }
+      }
+    }
+  }
+
+  // Section: Homepage Credentials
+  #credentials {
+    flex-wrap: wrap;
+
+    .credential {
+      flex: 33%;
+      margin: 0.5rem 0;
+
+      img {
+        width: 50%;
+      }
+    }
+  }
+
+  /**
+    ABOUT PAGE STYLES
+  */
+  // Section: About main
+  #about-main {
+    padding: 1rem 2rem;
+  }
+
+  // Section: Attorneys
+  #attorneys {
+    .attorney {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  // Section: Testimonials
+  #testimonials {
+    .testimonials-wrapper {
+      .testimonial {
+        padding: 1.5rem 2rem;
+      }
+    }
+  }
+
+  /**
+    SHARED PRACTICE AREA PAGE STYLES
+  */
+  .practice-area-content-wrapper {
+    flex-direction: column;
+    align-items: center;
+
+    div.card {
+      margin: 0;
+      margin-bottom: 1rem;
+    }
+
+    #sidebar {
+      margin-top: 0;
+      justify-self: center;
+      text-align: center;
+    }
+
+    @supports(display: grid) {
+      grid-template-areas: 
+      'main'
+      'sidebar';
+      grid-gap: 0;
+    }
+  }
+
+  /**
+    MEDIA PAGE STYLES
+  */
+
+  // Section: YouTube Player
+  #youtube-player {
+    .container {
+      grid-template-areas:
+        'player'
+        'column-left'
+        'column-right';
+    }
+
+    #player {
+      width: 300px;
+      height: 183px;
+    }
+  }
+
+  // Section: News Articles
+  #news-articles {
+    .news-articles-grid {
+      .card-content {
+        h5 {
+          display: block;
+          font-size: 1.1rem;
+          color: #666;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  // Section: Academic and Professional Papers
+  #academic-papers {
+    .academic-papers-grid {
+      .academic-papers-grid-item {
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid #ccc;
+
+        h3 {
+          padding-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+
+  /**
+    CONTACT PAGE
+  */
+
+  // Section: Contact
+  #contact {
+    a {
+      color: set-text-color($primary-color);
+      text-decoration: underline;
+    }
+  }
+} 
+
+// Landscape
+@media(max-height: 500px) {
+  #main-nav .menu-wrap .menu > div > div > ul > li {
+    padding: 0.3rem;
+  }
+}
