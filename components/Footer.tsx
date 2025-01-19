@@ -15,7 +15,7 @@ export const Footer = () => (
             <a href="tel:615-645-5665">(615) 645-5665</a>
         </div>
         <div>
-            <p><small>Copyright Cynthia Cheatham Law &copy; 2023. All rights reserved.</small></p>
+            <p><small>Copyright Cynthia Cheatham Law &copy; {new Date().getFullYear()}. All rights reserved.</small></p>
             <p>
             <small>Site designed by&nbsp; 
                 <a href="https://jacobweckert.com" target="_blank" rel="noopener noreferrer">Jacob Eckert</a>.
